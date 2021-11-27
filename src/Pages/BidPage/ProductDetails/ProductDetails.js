@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Col,
   Container,
@@ -7,17 +7,21 @@ import {
   Button,
   Card,
   Form,
+  Alert,
 } from "react-bootstrap";
 import Footer from "../../Shared/Footer/Footer";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 import "./ProductDetails.css";
 import DateCountdown from 'react-date-countdown-timer';
+import Timer from "../Timer/Timer";
 const ProductDetails = ({ product }) => {
   const { img, name, currentBid, startingBid } = product;
+  const [timeUp, setTimeUp] = useState(false);
+
   return (
     <div>
       <Navbar />
-      <PageHeader page="Product Details"></PageHeader>
+      <PageHeader page="Auction Details"></PageHeader>
       <Container className="my-5">
         <Row>
           <Col sm={12} md={5}>
@@ -49,7 +53,13 @@ const ProductDetails = ({ product }) => {
                 <h3 className="big-font">69</h3>
               </div>
               <div class="choose-dis mt-4">
-                <h4>No of Days Left for Bidding</h4>
+
+                <Timer expire='Nov 28, 21 02:00:00' setTimeUp={setTimeUp} />
+                {
+                  timeUp && <Alert variant="danger">
+                    Bidding Time Up.
+                  </Alert>
+                }
               </div>
             </Card>
             <div className="mt-5">

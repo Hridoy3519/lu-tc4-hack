@@ -28,13 +28,12 @@ const Banner = () => {
                     <div className="banner-right">
                         <div>
                             <h1 className="banner-quote">
-                                Small <br />
-                                <span className="pleasure-from"> Pleasure </span>
-                                <br />Aqua Ticking
+                                Tick Tick Ticking<br />
+                                Time to Bidding
                             </h1>
 
                             <p className="banner-text">
-                                We transparently build high-quality minimal watches from the finest components and materials.
+                                Time is passing by start Bidding to get your desired item.
                             </p>
                             {/* <div className="banner-btn">
                                 <Nav.Link className="primary-btn" as={HashLink} to="/#smallCollection" >Shop Now</Nav.Link>

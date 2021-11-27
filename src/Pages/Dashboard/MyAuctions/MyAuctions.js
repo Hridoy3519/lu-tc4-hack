@@ -8,7 +8,7 @@ const MyAuctions = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch(
-            "https://raw.githubusercontent.com/Hridoy3519/json-data/main/products.json"
+            "https://fathomless-tor-15212.herokuapp.com/products"
         )
             .then((res) => res.json())
             .then((data) => setProducts(data));

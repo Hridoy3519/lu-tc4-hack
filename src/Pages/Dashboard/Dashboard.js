@@ -7,6 +7,7 @@ import './Navigation/Navigation.css';
 import DashboardHome from './DashboardHome/DashboardHome';
 import useAuth from '../../hooks/useAuth';
 import AddAuction from './AddAuction/AddAuction';
+import MyAuctions from './MyAuctions/MyAuctions';
 // import ManageOrders from './ManageOrders/ManageOrders';
 // import AddProduct from './AddProduct/AddProduct';
 // import MakeAdmin from './MakeAdmin/MakeAdmin';
@@ -41,6 +42,10 @@ const Dashboard = () => {
 
                     <Route path={`${path}/addAuction`}>
                         <AddAuction />
+                    </Route>
+
+                    <Route path={`${path}/myAuctions`}>
+                        <MyAuctions />
                     </Route>
 
 

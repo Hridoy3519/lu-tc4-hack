@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../../Shared/Navbar/Navbar';
 import Banner from '../Banner/Banner';
 import HomeProducts from '../HomeProducts/HomeProducts';
-
 const Home = () => {
     return (
         <>

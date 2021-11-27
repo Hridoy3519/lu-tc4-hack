@@ -6,6 +6,7 @@ import useAuth from '../../../hooks/useAuth';
 import { Alert } from 'react-bootstrap';
 import { FaRegEyeSlash, FaRegEye, FaGooglePlusSquare } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
+import Header from '../../Shared/Navbar/Navbar';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
@@ -34,7 +35,9 @@ const Register = () => {
     }
 
     return (
-        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg">
+        <>
+        <Header></Header>
+        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg margin">
             <div className="form-container">
                 <div className="log-in-header">Sign Up</div>
                 <form >
@@ -65,18 +68,13 @@ const Register = () => {
                         <label htmlFor="floatingPassword">Confirm Password</label>
                     </div>
                     <button onClick={handleLoginSubmit} className="btn-custom">SignUp</button>
+                    <div className="mt-3">
+                        Already have an account? <NavLink to="/login">Login</NavLink>
+                    </div>
                 </form>
-                <div className="login">
-                    Already Signed up ? <NavLink to="/login"> LogIn now</NavLink>
-                </div>
-                <div className="links">
-                    <button onClick={handleGoogleSignIn} className="google">
-                        <FaGooglePlusSquare /><span>Google</span>
-                    </button>
-                </div>
             </div>
         </div>
-
+</>
     );
 };
 

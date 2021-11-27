@@ -8,6 +8,7 @@ import Register from "./Pages/Authentication/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import ScrollToTop from "./Pages/Shared/ScrollToTop/ScrollToTop";
 import Auctions from "./Pages/Auctions/Auction";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/auctions">
             <Auctions />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
       </Router>

@@ -6,6 +6,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
+import BidPage from "./Pages/BidPage/BidPage";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/register">
             <Register></Register>
+          </Route>
+          <Route path="/bidPage/:id">
+            <BidPage/>
           </Route>
         </Switch>
       </Router>

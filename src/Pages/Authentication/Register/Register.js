@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -23,7 +22,7 @@ const Register = () => {
     const handleLoginSubmit = e => {
         if (loginData.password !== loginData.password2) {
             alert('Your password did not match');
-            return
+            return;
         }
         console.log(loginData.name);
         registerUser(loginData.email, loginData.password, loginData.name, history);

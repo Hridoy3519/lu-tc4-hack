@@ -2,6 +2,7 @@ import React from 'react';
 import "./Navbar.css";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
+import { useState } from 'react';
 // import logo from '../../../images/logo.png'
 // import useAuth from '../../../hooks/useAuth';
 // import { useLocation } from 'react-router';
@@ -15,8 +16,22 @@ const Header = () => {
     //     logOut(location.pathname + location.hash, history);
     // }
 
+    //fixed navbar
+    const [isFixed, setIsFixed] = useState(false);
+
+    window.addEventListener("scroll", function () {
+        const scrollHeight = window.pageYOffset;
+        const navHeight = 100;
+        if (scrollHeight > navHeight) {
+            setIsFixed(true);
+        } else {
+            setIsFixed(false);
+        }
+    });
+
     return (
-        <Navbar className="custom-nav" fixed='top' expand="lg">
+        <Navbar fixed='top' expand="lg"
+            className={`mobile-fixed custom-nav ${isFixed ? "fixed-nav" : ""}`}>
             <Container>
                 <Navbar.Brand as={HashLink} to="/">
                     <div className="d-flex align-items-center justify-content-center">

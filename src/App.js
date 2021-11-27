@@ -5,27 +5,27 @@ import Home from './Pages/Home/Home/Home';
 import AuthProvider from './contexts/AuthProvider';
 import Login from './Pages/Authentication/Login/Login';
 import Register from './Pages/Authentication/Register/Register';
+import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <AuthProvider>
-        <Router>
-          <Switch>
-           <Route path='/' exact >
-          <Home></Home>
-         </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/register">
-              <Register></Register>
-            </Route>
-          </Switch>
-        </Router>
-      </AuthProvider>
-    </div>
-    );
+    <AuthProvider>
+      <Router>
+        <Switch>
+         <Route path='/' exact >
+        <Home></Home>
+       </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+        </Switch>
+        <Footer/>
+      </Router>
+    </AuthProvider>
+  );
 }
 
 export default App;

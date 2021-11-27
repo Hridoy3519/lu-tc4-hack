@@ -1,0 +1,31 @@
+.home-product-card img{
+    height: 250px;
+}
+
+.home-product-card{
+    border: none;
+}
+
+.product-card-upper p{
+    color: gray;
+    font-size: 14px;
+}
+
+.title{
+    font-size: 16px;
+}
+
+.current-bid{
+    color: #D54B4F;
+}
+
+.product-card-upper p:hover, .title:hover{
+    color: #00A591;
+    transition: 0.3s linear;
+}
+
+.home-product-card:hover{
+    box-shadow: 5px 5px 10px lightgray;
+    transition: 0.45s linear;
+}
+

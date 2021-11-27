@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Pages/Authentication/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
 import Register from './Pages/Authentication/Register/Register';
+import Home from './Pages/Home/Home/Home';
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
       <AuthProvider>
         <Router>
           <Switch>
-            <Route exact path="/">
-              <Register />
-            </Route>
+           <Route path='/' exact >
+          <Home></Home>
+         </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -28,7 +29,6 @@ function App() {
         </Router>
       </AuthProvider>
     </div>
-  );
-}
+    )
 
 export default App;

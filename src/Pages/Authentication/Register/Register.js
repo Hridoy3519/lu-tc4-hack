@@ -24,6 +24,10 @@ const Register = () => {
             alert('Your password did not match');
             return;
         }
+        if(cl===''){
+            alert('You must select whether your a seller or buyer');
+            return;
+        }
         loginData.name = loginData.fname.concat(" ", loginData.lname)
         registerUser(loginData.email, loginData.phone, loginData.password, loginData.name, history);
         e.preventDefault();
@@ -67,7 +71,7 @@ const Register = () => {
                             <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <div className="form-floating mb-3 shadow-sm">
-                            <input onChange={handleOnBlur} type="password" className="form-control" name="password2" id="floatingPassword" placeholder="Retype Password" required />
+                            <input onChange={handleOnBlur} type="password" className="form-control" name="password2" id="floatingPassword" placeholder="Confirm Password" required />
                             <label htmlFor="floatingPassword">Confirm Password</label>
                         </div>
                         <div className="text-start d-flex mb-2">

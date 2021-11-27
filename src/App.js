@@ -9,6 +9,7 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import BidPage from "./Pages/BidPage/BidPage";
 import ScrollToTop from "./Pages/Shared/ScrollToTop/ScrollToTop";
 import Auctions from "./Pages/Auctions/Auction";
+import Payment from "./Pages/Payment/Payment/Payment";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/auctions">
             <Auctions />
+          </Route>
+          <Route path="/payment">
+            <Payment></Payment>
           </Route>
         </Switch >
       </Router >

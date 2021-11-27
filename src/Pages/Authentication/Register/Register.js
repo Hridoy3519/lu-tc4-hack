@@ -28,8 +28,11 @@ const Register = () => {
             alert('You must select whether your a seller or buyer');
             return;
         }
-        loginData.name = loginData.fname.concat(" ", loginData.lname)
-        registerUser(loginData.email, loginData.phone, loginData.password, loginData.name, history);
+        loginData.name = loginData.fname.concat(" ", loginData.lname);
+        loginData.status = "unverified";
+        loginData.role = cl;
+        loginData.premium = "free";
+        registerUser(loginData.email, loginData.phone, loginData.password, loginData.name, loginData.status, loginData.role, loginData.premium, history);
         e.preventDefault();
     }
     useEffect(()=>{

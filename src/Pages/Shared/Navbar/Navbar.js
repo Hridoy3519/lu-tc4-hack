@@ -8,6 +8,7 @@ import { HashLink } from 'react-router-hash-link';
 // import { useHistory } from "react-router-dom";
 
 const Header = () => {
+    const newLocal = <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>;
     // const { user, logOut } = useAuth();
     // const location = useLocation();
     // const history = useHistory();
@@ -46,6 +47,7 @@ const Header = () => {
                         // user.email ? <Nav.Link className="text-center nav-btn" onClick={handleLogOut} >Log Out</Nav.Link>
                         //     : <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
                     }
+                    {newLocal}
 
                 </Navbar.Collapse>
             </Container>

@@ -31,7 +31,7 @@ const Header = () => {
 
     return (
         <Navbar fixed='top' expand="lg"
-            className={`mobile-fixed custom-nav ${isFixed ? "fixed-nav" : ""}`}>
+            className="custom-nav">
             <Container>
                 <Navbar.Brand as={HashLink} to="/">
                     <div className="d-flex align-items-center justify-content-center">
@@ -61,7 +61,7 @@ const Header = () => {
                         // user.email ? <Nav.Link className="text-center nav-btn" onClick={handleLogOut} >Log Out</Nav.Link>
                         //     : <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
                     }
-                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
+                    <Nav.Link className="text-center primary-btn login-nav-btn" style={{ marginLeft: "15px" }} as={HashLink} to="/login">LogIn</Nav.Link>
 
                 </Navbar.Collapse>
             </Container>

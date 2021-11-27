@@ -18,8 +18,9 @@ const ProductCard = ({ product }) => {
           </div>
           <Card.Title className="title text-start">{name}</Card.Title>
           <Card.Text>
-            <div className="text-start">
+            <div className="text-start d-flex justify-content-between">
               <h4 className="current-bid">৳ {currentBid}</h4>
+              <button className="primary-btn card-btn">Bid Now</button>
             </div>
           </Card.Text>
         </Card.Body>

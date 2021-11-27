@@ -28,4 +28,8 @@
     box-shadow: 5px 5px 10px lightgray;
     transition: 0.45s linear;
 }
-
+.card-btn{
+    background-color: #027262 !important;
+    padding: 0.4rem 0.8rem !important;
+    transition: all 0.1s ease !important;
+}

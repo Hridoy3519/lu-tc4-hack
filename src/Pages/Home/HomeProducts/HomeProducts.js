@@ -15,6 +15,7 @@ const HomeProducts = () => {
   }, []);
   return (
     <Container className="my-5">
+      <div className="section-title">Newest Arrivals</div>
       <Row xs={1} md={4} className="g-4">
         {products.map((pd) => (
           <ProductCard key={products.key} product={pd}></ProductCard>

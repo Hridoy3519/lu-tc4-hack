@@ -8,24 +8,22 @@ import Register from './Pages/Authentication/Register/Register';
 
 function App() {
   return (
-    <div className="App">
-      <AuthProvider>
-        <Router>
-          <Switch>
-           <Route path='/' exact >
-          <Home></Home>
-         </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/register">
-              <Register></Register>
-            </Route>
-          </Switch>
-        </Router>
-      </AuthProvider>
-    </div>
-    );
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route path='/' exact >
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
+  )
 }
 
 export default App;

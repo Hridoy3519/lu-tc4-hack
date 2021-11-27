@@ -48,3 +48,8 @@
     transition: .35s;
 }
 
+.radio-btn-color:checked{
+    background-color: #374252 !important;
+    border: none !important;
+}
+

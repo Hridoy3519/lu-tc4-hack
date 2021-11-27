@@ -16,19 +16,6 @@ const Header = () => {
     //     logOut(location.pathname + location.hash, history);
     // }
 
-    //fixed navbar
-    const [isFixed, setIsFixed] = useState(false);
-
-    window.addEventListener("scroll", function () {
-        const scrollHeight = window.pageYOffset;
-        const navHeight = 100;
-        if (scrollHeight > navHeight) {
-            setIsFixed(true);
-        } else {
-            setIsFixed(false);
-        }
-    });
-
     return (
         <Navbar fixed='top' expand="lg"
             className="custom-nav">
@@ -46,7 +33,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav.Link className="text-center nav-btn" as={HashLink} to="/">Home</Nav.Link>
 
-                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/auctions">Auctions</Nav.Link>
+                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/auctions">All Auctions</Nav.Link>
 
                     {/* {
                         user.email ?

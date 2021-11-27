@@ -6,8 +6,8 @@ import AuthProvider from "./contexts/AuthProvider";
 import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
-import Auctions from "./Pages/Auctions/Auctions";
 import ScrollToTop from "./Pages/Shared/ScrollToTop/ScrollToTop";
+import Auctions from "./Pages/Auctions/Auction";
 
 function App() {
   return (
@@ -28,11 +28,9 @@ function App() {
           <Route path="/auctions">
             <Auctions />
           </Route>
-
-        </Switch>
-      </Router>
-    </AuthProvider>
+        </Switch >
+      </Router >
+    </AuthProvider >
   );
 }
-
 export default App;

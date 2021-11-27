@@ -16,22 +16,9 @@ const Header = () => {
     //     logOut(location.pathname + location.hash, history);
     // }
 
-    //fixed navbar
-    const [isFixed, setIsFixed] = useState(false);
-
-    window.addEventListener("scroll", function () {
-        const scrollHeight = window.pageYOffset;
-        const navHeight = 100;
-        if (scrollHeight > navHeight) {
-            setIsFixed(true);
-        } else {
-            setIsFixed(false);
-        }
-    });
-
     return (
         <Navbar fixed='top' expand="lg"
-            className={`mobile-fixed custom-nav ${isFixed ? "fixed-nav" : ""}`}>
+            className="custom-nav">
             <Container>
                 <Navbar.Brand as={HashLink} to="/">
                     <div className="d-flex align-items-center justify-content-center">
@@ -46,7 +33,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav.Link className="text-center nav-btn" as={HashLink} to="/">Home</Nav.Link>
 
-                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/watch-collection">Watch Collection</Nav.Link>
+                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/auctions">All Auctions</Nav.Link>
 
                     {/* {
                         user.email ?
@@ -61,7 +48,7 @@ const Header = () => {
                         // user.email ? <Nav.Link className="text-center nav-btn" onClick={handleLogOut} >Log Out</Nav.Link>
                         //     : <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
                     }
-                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
+                    <Nav.Link className="text-center primary-btn login-nav-btn" style={{ marginLeft: "15px" }} as={HashLink} to="/login">LogIn</Nav.Link>
 
                 </Navbar.Collapse>
             </Container>

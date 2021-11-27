@@ -36,9 +36,9 @@ const Banner = () => {
                             <p className="banner-text">
                                 We transparently build high-quality minimal watches from the finest components and materials.
                             </p>
-                            <div className="banner-btn">
+                            {/* <div className="banner-btn">
                                 <Nav.Link className="primary-btn" as={HashLink} to="/#smallCollection" >Shop Now</Nav.Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </Col>

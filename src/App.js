@@ -29,7 +29,7 @@ function App() {
         </Router>
       </AuthProvider>
     </div>
-    )
+    );
   }
 
 export default App;

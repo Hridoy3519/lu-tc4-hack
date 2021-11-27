@@ -14,6 +14,10 @@ import "./ProductDetails.css";
 import DateCountdown from 'react-date-countdown-timer';
 const ProductDetails = ({ product }) => {
   const { img, name, currentBid, startingBid } = product;
+  
+
+
+
   return (
     <div>
       <Navbar />
@@ -55,7 +59,7 @@ const ProductDetails = ({ product }) => {
             <div className="mt-5">
               <Form className="d-flex justify-content-between">
                 <Form.Group
-                  className="mb-3"
+                  className="mb-3 bid-input"
                   controlId="exampleForm.ControlInput1"
                 >
                   <Form.Control

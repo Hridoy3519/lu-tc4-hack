@@ -31,7 +31,7 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
-        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center">
+        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg">
                 <div className="form-container">
                     {
                         path ?
@@ -40,7 +40,7 @@ const Login = () => {
                                 color: "red"
                             }}>Please LogIn First</div>
 
-                            : <div className="log-in-header">LogIn Form</div>
+                            : <div className="log-in-header">Login</div>
                     }
                    <form >
                         <div className="form-floating mb-3 shadow-sm">

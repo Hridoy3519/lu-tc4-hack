@@ -1,0 +1,14 @@
+
+
+/* --------------------------------------------- */
+
+.add-form-div{
+    width: 40%;
+}
+
+
+@media screen and (max-width: 575px) {
+    .add-form-div{
+        width: 100%;
+    }
+}

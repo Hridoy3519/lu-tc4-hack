@@ -9,6 +9,7 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import BidPage from "./Pages/BidPage/BidPage";
 import ScrollToTop from "./Pages/Shared/ScrollToTop/ScrollToTop";
 import Auctions from "./Pages/Auctions/Auction";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Payment from "./Pages/Payment/Payment/Payment";
 
 function App() {
@@ -33,12 +34,15 @@ function App() {
           <Route path="/auctions">
             <Auctions />
           </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
           <Route path="/payment">
             <Payment></Payment>
           </Route>
-        </Switch >
-      </Router >
-    </AuthProvider >
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 export default App;

@@ -3,18 +3,15 @@ import "./Navbar.css";
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import { useState } from 'react';
-// import logo from '../../../images/logo.png'
-// import useAuth from '../../../hooks/useAuth';
-// import { useLocation } from 'react-router';
-// import { useHistory } from "react-router-dom";
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    // const { user, logOut } = useAuth();
+    const { user, logout } = useAuth();
     // const location = useLocation();
     // const history = useHistory();
-    // const handleLogOut = () => {
-    //     logOut(location.pathname + location.hash, history);
-    // }
+    const handleLogOut = () => {
+        logout();
+    }
 
     return (
         <Navbar fixed='top' expand="lg"
@@ -35,20 +32,18 @@ const Header = () => {
 
                     <Nav.Link className="text-center nav-btn" as={HashLink} to="/auctions">All Auctions</Nav.Link>
 
-                    {/* {
-                        user.email ?
-                            <Nav.Link className="text-center nav-btn" as={HashLink} to="/dashboard">DashBoard</Nav.Link> : ""
-                    } */}
 
                     {
-                        // user.email ? <Nav.Link className="text-center nav-btn" as={HashLink} to="/dashboard">{user.displayName}</Nav.Link> : ""
+                        user.email ? <Nav.Link className="text-center nav-btn" as={HashLink} to="/dashboard">Dashboard</Nav.Link> : ""
+                    }
+                    {
+                        user.email ? <Nav.Link className="text-center nav-btn" as={HashLink} to="/dashboard">{user.displayName}</Nav.Link> : ""
                     }
 
                     {
-                        // user.email ? <Nav.Link className="text-center nav-btn" onClick={handleLogOut} >Log Out</Nav.Link>
-                        //     : <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
+                        user.email ? <Nav.Link className="text-center nav-btn" onClick={handleLogOut} >Log Out</Nav.Link>
+                            : <Nav.Link className="text-center primary-btn login-nav-btn" style={{ marginLeft: "15px" }} as={HashLink} to="/login">LogIn</Nav.Link>
                     }
-                    <Nav.Link className="text-center primary-btn login-nav-btn" style={{ marginLeft: "15px" }} as={HashLink} to="/login">LogIn</Nav.Link>
 
                 </Navbar.Collapse>
             </Container>

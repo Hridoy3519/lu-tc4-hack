@@ -6,21 +6,27 @@ import AuthProvider from "./contexts/AuthProvider";
 import Login from "./Pages/Authentication/Login/Login";
 import Register from "./Pages/Authentication/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
+import ScrollToTop from "./Pages/Shared/ScrollToTop/ScrollToTop";
+import Auctions from "./Pages/Auctions/Auction";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route path="/" exact>
             <Home></Home>
-            <Footer/>
+            <Footer />
           </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
           <Route path="/register">
             <Register></Register>
+          </Route>
+          <Route path="/auctions">
+            <Auctions />
           </Route>
         </Switch>
       </Router>

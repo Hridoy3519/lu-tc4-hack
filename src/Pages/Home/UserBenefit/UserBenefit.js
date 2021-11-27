@@ -20,16 +20,16 @@ const UserBenefit = () => {
                                         Participate in auctions
                                     </li>
                                     <li className="lawson-point">
-                                        Submit your ads
+                                        Submit your auctions
                                     </li>
                                     <li className="lawson-point">
-                                        Promote your ads
+                                        Promote your auction
                                     </li>
                                     <li className="lawson-point">
                                         Get reviewed to become noticeable
                                     </li>
                                     <li className="lawson-point">
-                                        Save favorite ads
+                                        Save favorite auctions
                                     </li>
                                     <li className="lawson-point">
                                         And more

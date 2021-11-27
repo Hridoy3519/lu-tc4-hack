@@ -4,10 +4,11 @@ import { FaGooglePlusSquare, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 import { useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Header from '../../Shared/Navbar/Navbar';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const {  loginUser, signInWithGoogle } = useAuth();
+    const { loginUser, signInWithGoogle } = useAuth();
 
     const history = useHistory();
     const location = useLocation();
@@ -31,47 +32,44 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
+        <>
+        <Header></Header>
         <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg">
-                <div className="form-container">
-                    {
-                        path ?
-                            <div className="log-in-header" style={{
-                                fontSize: '25px',
-                                color: "red"
-                            }}>Please LogIn First</div>
+            <div className="form-container">
+                {
+                    path ?
+                        <div className="log-in-header" style={{
+                            fontSize: '25px',
+                            color: "red"
+                        }}>Please LogIn First</div>
 
-                            : <div className="log-in-header">Login</div>
-                    }
-                   <form >
-                        <div className="form-floating mb-3 shadow-sm">
-                            <input onChange={handleOnChange} type="email" className="form-control" id="floatingEmail" name="email" placeholder="name@example.com" />
-                            <label htmlFor="floatingEmail">Email</label>
-                        </div>
-                        <div className="form-floating mb-3 shadow-sm">
-                            <input onChange={handleOnChange} type="password" className="form-control" name="password" id="floatingPassword" placeholder="Password" />
-                            <label htmlFor="floatingPassword">Password</label>
-                        </div>
-                        <button onClick={handleLoginSubmit} className="btn-custom">Login</button>
-                    </form>
-                    <div className="auth">
-                        Or log in with
+                        : <div className="log-in-header">Login</div>
+                }
+                <form >
+                    <div className="form-floating mb-3 shadow-sm">
+                        <input onChange={handleOnChange} type="email" className="form-control" id="floatingEmail" name="email" placeholder="name@example.com" />
+                        <label htmlFor="floatingEmail">Email</label>
                     </div>
-                    <div className="links">
-                        <button onClick={handleGoogleSignIn} className="google">
-                            <FaGooglePlusSquare /><span>Google</span>
-                        </button>
+                    <div className="form-floating mb-3 shadow-sm">
+                        <input onChange={handleOnChange} type="password" className="form-control" name="password" id="floatingPassword" placeholder="Password" />
+                        <label htmlFor="floatingPassword">Password</label>
                     </div>
-                    <div className="signup">
-                        Not a member?
-                        <NavLink to={
-                            {
-                                pathname: '/register',
-                                state: { from: path }
-                            }
-                        }> Signup now</NavLink>
-                    </div>
+                    <button onClick={handleLoginSubmit} className="btn-custom">Login</button>
+                </form>
+                <div className="nm-login-form-divider">
+                    <span>Or</span>
                 </div>
+                <NavLink to={
+                    {
+                        pathname: '/register',
+                        state: { from: path }
+                    }
+                }><button className="btn-custom" >Sign Up
+                </button>
+                </NavLink>
             </div>
+        </div>
+        </>
     );
 };
 

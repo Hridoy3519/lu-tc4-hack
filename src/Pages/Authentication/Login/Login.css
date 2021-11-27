@@ -1,0 +1,27 @@
+.nm-login-form-divider {
+    position: relative;
+    width: 100%;
+    margin: 19px 0;
+    text-align: center;
+}
+
+.nm-login-form-divider:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    content: " ";
+    width: 45%;
+    height: 1px;
+    background: #ccc;
+}
+.nm-login-form-divider:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    content: " ";
+    width: 45%;
+    height: 1px;
+    background: #ccc;
+}

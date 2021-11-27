@@ -1,6 +1,6 @@
 .bg{
-    background-color: #2d3436;
-    min-height: 100vh;
+    background-color: #374252;
+    min-height: calc(100vh - 70px);
 }
 .form-container{
     position: relative;
@@ -15,8 +15,21 @@
   .log-in-header{
       margin-bottom: 30px;
       font-size: 48px;
-      font-weight: 500;
+      font-weight: 300;
 }
 .btn-custom{
-
+    border: 2px solid #374252;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    background-color: #374252;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
 }
+.btn-custom:hover{
+    background-color: transparent;
+    color: #374252;
+    transition: .3s;
+}
+

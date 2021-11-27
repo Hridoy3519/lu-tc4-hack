@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Register.css';
 import { useHistory, useLocation } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import { Alert } from 'react-bootstrap';
-import { FaRegEyeSlash, FaRegEye, FaGooglePlusSquare } from "react-icons/fa";
-import { MdErrorOutline } from "react-icons/md";
 import Header from '../../Shared/Navbar/Navbar';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
+    const [cl, setCl] = useState('');
     const location = useLocation();
     const history = useHistory();
     const { user, registerUser, signInWithGoogle, isLoading, authError } = useAuth();
@@ -30,13 +28,14 @@ const Register = () => {
         registerUser(loginData.email, loginData.phone, loginData.password, loginData.name, history);
         e.preventDefault();
     }
-    const handleChecked = e =>{
-        const userStatus = e.target.id;
-        console.log(userStatus);
+    useEffect(()=>{
         const newLoginData = { ...loginData };
-        newLoginData["userStatus"] = userStatus;
+        newLoginData["userStatus"] = cl;
         setLoginData(newLoginData);
-    }
+        console.log(newLoginData);
+    }, [cl]);
+    
+
 
     return (
         <>
@@ -73,13 +72,13 @@ const Register = () => {
                         </div>
                         <div className="text-start d-flex mb-2">
                             <div class="form-check me-2">
-                                <input onChange={handleChecked} class="form-check-input radio-btn-color" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                                <input onChange={() => setCl("buyer")} class="form-check-input radio-btn-color" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={cl === "buyer"} />
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Buyer
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input onChange={handleChecked} class="form-check-input radio-btn-color" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                                <input onChange={() => setCl("seller")} class="form-check-input radio-btn-color" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked={cl === "seller"} />
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Seller
                                 </label>

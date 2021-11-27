@@ -9,25 +9,23 @@ import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <AuthProvider>
-        <Router>
-          <Switch>
-           <Route path='/' exact >
-          <Home></Home>
-         </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/register">
-              <Register></Register>
-            </Route>
-          </Switch>
-          <Footer/>
-        </Router>
-      </AuthProvider>
-    </div>
-    );
+    <AuthProvider>
+      <Router>
+        <Switch>
+         <Route path='/' exact >
+        <Home></Home>
+       </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+        </Switch>
+        <Footer/>
+      </Router>
+    </AuthProvider>
+  );
 }
 
 export default App;

@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <>
         <Header></Header>
-        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg">
+        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg margin">
             <div className="form-container">
                 {
                     path ?
@@ -64,7 +64,7 @@ const Login = () => {
                         pathname: '/register',
                         state: { from: path }
                     }
-                }><button className="btn-custom" >Sign Up
+                }><button className="btn-custom2" >Sign Up
                 </button>
                 </NavLink>
             </div>

@@ -1,6 +1,6 @@
 .bg{
     background-color: #374252;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 0px);
 }
 .form-container{
     position: relative;
@@ -28,8 +28,23 @@
     border-radius: 3px;
 }
 .btn-custom:hover{
-    background-color: transparent;
+    background-color: white;
     color: #374252;
-    transition: .3s;
+    transition: .35s;
+}
+.btn-custom2{
+    border: 2px solid #374252;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    background-color: white;
+    color: #374252;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.btn-custom2:hover{
+    background-color: #374252;
+    color: white;
+    transition: .35s;
 }
 

@@ -37,7 +37,7 @@ const Register = () => {
     return (
         <>
         <Header></Header>
-        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg">
+        <div style={{ height: '90vh' }} className="d-flex justify-content-center align-items-center bg margin">
             <div className="form-container">
                 <div className="log-in-header">Sign Up</div>
                 <form >

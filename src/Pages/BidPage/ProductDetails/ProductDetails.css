@@ -1,0 +1,48 @@
+.purchase-form{
+    background-color: #0272611c;
+    border: none;
+    color: black;
+    border-radius: 20px;
+}
+
+.purchase-form h4,h3{
+    font-size: 18px;
+}
+
+.big-font{
+    font-size: 24px;
+}
+
+.bid-field{
+    width: 600px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.bid-text{
+    color: gray;
+    font-size: 16px;
+}
+
+.choose-dis{
+    position: relative;
+    height: 20vh;
+    text-align: center;
+}
+#counts{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#counts li{
+    width: 8rem;
+}
+#counts li h1{
+    font-size: 5rem;
+    font-weight: 500;
+}
+#days,#minutes,#seconds,#hours{
+    /* text-shadow: .1rem .1rem 3rem #ed563b; */
+}

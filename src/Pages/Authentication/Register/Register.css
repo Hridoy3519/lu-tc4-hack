@@ -1,6 +1,6 @@
 .bg{
     background-color: #374252;
-    min-height: calc(100vh - 0px);
+    min-height: calc(100vh - 50px);
 }
 .form-container{
     position: relative;
@@ -46,5 +46,10 @@
     background-color: #374252;
     color: white;
     transition: .35s;
+}
+
+.radio-btn-color:checked{
+    background-color: #374252 !important;
+    border: none !important;
 }
 

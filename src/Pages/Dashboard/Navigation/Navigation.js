@@ -151,6 +151,10 @@ const Navigation = ({ url }) => {
                         <NavLink to={`${url}/addAuction`}><MdQueue /> Add An Auction</NavLink>
                     </li>
 
+                    <li onClick={() => setClicked(true)} className="custom-nav-links">
+                        <NavLink to={`${url}/myAuctions`}><MdQueue /> My Auctions</NavLink>
+                    </li>
+
 
 
                 </ul>

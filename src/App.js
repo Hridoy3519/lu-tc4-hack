@@ -5,14 +5,24 @@ import Home from './Pages/Home/Home/Home';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/' exact >
+    <div className="App">
+      <AuthProvider>
+        <Router>
+          <Switch>
+           <Route path='/' exact >
           <Home></Home>
-        </Route>
-      </Switch>
-    </Router>
-  );
+         </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+          </Switch>
+        </Router>
+      </AuthProvider>
+    </div>
+    );
 }
 
 export default App;

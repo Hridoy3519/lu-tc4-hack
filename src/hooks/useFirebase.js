@@ -16,15 +16,15 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
-    const registerUser = (email, phone, password, name, history) => {
+    const registerUser = (email, phone, password, name, status, role,premium, history) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 setAuthError('');
-                const newUser = { email, displayName: name, phone };
+                const newUser = { email, displayName: name, phone, status, role, premium };
                 setUser(newUser);
                 // save user to the database
-                saveUser(email, name, phone, 'POST');
+                saveUser(email, name, phone, status, role,premium, 'POST');
                 // send name to firebase after creation
                 updateProfile(auth.currentUser, {
                     displayName: name
@@ -86,7 +86,7 @@ const useFirebase = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`https://morning-atoll-56415.herokuapp.com/users/${user.email}`)
+        fetch(`https://fathomless-tor-15212.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -101,9 +101,9 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    const saveUser = (email, displayName, method) => {
-        const user = { email, displayName };
-        fetch('https://morning-atoll-56415.herokuapp.com/users', {
+    const saveUser = (email, displayName, phone, status, role,premium, method) => {
+        const user = { email, displayName, phone, status, role, premium };
+        fetch('https://fathomless-tor-15212.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

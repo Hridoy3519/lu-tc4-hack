@@ -10,7 +10,7 @@ const Auctions = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch(
-            "https://raw.githubusercontent.com/Hridoy3519/json-data/main/products.json"
+            "http://localhost:5000/products"
         )
             .then((res) => res.json())
             .then((data) => setProducts(data));
@@ -22,7 +22,7 @@ const Auctions = () => {
                 <div className="section-title">All Auctions</div>
                 <Row xs={1} md={4} className="g-4">
                     {products.map((pd) => (
-                        <ProductCard key={products.key} product={pd}></ProductCard>
+                        <ProductCard key={products._id} product={pd}></ProductCard>
                     ))}
                 </Row>
             </Container>

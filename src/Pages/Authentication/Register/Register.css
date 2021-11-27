@@ -1,6 +1,6 @@
 .bg{
     background-color: #374252;
-    min-height: calc(100vh - 0px);
+    min-height: calc(100vh - 50px);
 }
 .form-container{
     position: relative;

@@ -46,6 +46,7 @@ const Header = () => {
                         // user.email ? <Nav.Link className="text-center nav-btn" onClick={handleLogOut} >Log Out</Nav.Link>
                         //     : <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
                     }
+                    <Nav.Link className="text-center nav-btn" as={HashLink} to="/login">LogIn</Nav.Link>
 
                 </Navbar.Collapse>
             </Container>

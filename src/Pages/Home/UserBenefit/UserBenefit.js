@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Nav } from 'react-bootstrap';
+import { Card, Col, Container, Nav, Row } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import "./UserBenefit.css";
 
@@ -9,32 +9,40 @@ const UserBenefit = () => {
             <Card className="bg-dark text-white mt-3 mt-md-5">
                 <Card.Img src="https://i.ibb.co/6vFf0pc/hiw-bg.jpg" alt="Card image" />
                 <Card.ImgOverlay>
-                    <div className="lawson-details">
-                        <div className="lawson-title">
-                            User Benefits
-                        </div>
-                        <ul className="lawson-text">
-                            <li>
-                                Participate in auctions
-                            </li>
-                            <li>
-                                Submit your ads
-                            </li>
-                            <li>
-                                Promote your ads
-                            </li>
-                            <li>
-                                Get reviewed to become noticeable
-                            </li>
-                            <li>
-                                Save favorite ads
-                            </li>
-                            <li>
-                                And more
-                            </li>
-                        </ul>
-                        <Nav.Link className="secondary-btn lawson-btn" as={HashLink} to="/#smallCollection" >Shop Collection</Nav.Link>
-                    </div>
+                    <Row>
+                        <Col xs={6}>
+                            <div className="lawson-details">
+                                <div className="lawson-title">
+                                    User Benefits
+                                </div>
+                                <ul className="lawson-text">
+                                    <li className="lawson-point">
+                                        Participate in auctions
+                                    </li>
+                                    <li className="lawson-point">
+                                        Submit your ads
+                                    </li>
+                                    <li className="lawson-point">
+                                        Promote your ads
+                                    </li>
+                                    <li className="lawson-point">
+                                        Get reviewed to become noticeable
+                                    </li>
+                                    <li className="lawson-point">
+                                        Save favorite ads
+                                    </li>
+                                    <li className="lawson-point">
+                                        And more
+                                    </li>
+                                </ul>
+                            </div>
+                        </Col>
+                        <Col xs={6}>
+                            <div >
+                                <img className="monitor-img" src="https://i.ibb.co/vz6hQYs/iii.png" alt="" />
+                            </div>
+                        </Col>
+                    </Row>
 
 
                 </Card.ImgOverlay>

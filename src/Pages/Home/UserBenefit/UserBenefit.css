@@ -1,7 +1,7 @@
 .lawson-details{
     width: 100%;
     height: 100%;
-    padding: 12% 50% 12% 12%;
+    padding: 16% 22% 11% 21%;
 }
 .lawson-title{
     font-family: 'Libre Baskerville', serif;
@@ -16,8 +16,16 @@
     width: 100%;
     height: 600px;
     overflow: hidden;
+    margin-bottom: 100px;
 }
-
+.lawson-point{
+    color: #d4d4d4;
+    margin: 0.5rem 0px;
+    font-weight: 500;
+}
+.monitor-img{
+    width: 100%;
+}
 
 
 @media screen and (max-width: 575px) {

@@ -1,38 +1,51 @@
-.App {
+.section-title{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 50px;
+  margin-bottom: 2rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primary-btn{
+  color: white !important;
+  padding: 0.7rem 1.8rem !important;
+  background-color: #008C77;
+  border-radius: 7px;
+  transition: all 0.5s ease-in !important;
+  border: none;
+}
+.primary-btn:hover{
+  box-shadow: 3px 3px 10px  gray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* left right animation */
+.left-right{
+  display: inline-block;
+  position: relative;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  text-align: center;
+}
+.left-right::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: black;
+  transition: all 0.3s ease-in;
+  animation: left-right 3s ease-in-out infinite alternate-reverse;
+}
+
+
+@keyframes left-right {
+  0%{
+      width: 0%;
+      left: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  50%{
+      width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+      width: 0%;
+      right: 0;
   }
 }

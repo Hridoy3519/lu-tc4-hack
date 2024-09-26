@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./ProductCard.css";
 const ProductCard = ({ product }) => {
-  const { img, name, category, place, currentBid } = product;
+  const { img, name, category, place, currentBid, _id } = product;
   return (
     <Col>
       <Card className="home-product-card h-100">
@@ -18,8 +19,11 @@ const ProductCard = ({ product }) => {
           </div>
           <Card.Title className="title text-start">{name}</Card.Title>
           <Card.Text>
-            <div className="text-start">
+            <div className="text-start d-flex justify-content-between">
               <h4 className="current-bid">৳ {currentBid}</h4>
+              <NavLink to={`bidPage/${_id}`}>
+                <button className="primary-btn card-btn">Bid Now</button>
+              </NavLink>
             </div>
           </Card.Text>
         </Card.Body>

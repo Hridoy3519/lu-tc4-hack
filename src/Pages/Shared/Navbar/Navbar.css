@@ -1,6 +1,6 @@
 .custom-nav{
-    height: 70px;
     background-color: #374252;
+    height: 70px;
 }
 .logo-div{
     width: 30px;
@@ -49,6 +49,9 @@
     background-color: white;
     transition: all 0.25s ease-in;
 }
+.nav-btn:active{
+    color: red;
+}
 .nav-btn:hover{
     color: white;
 }
@@ -58,3 +61,22 @@
 .nav-btn:hover::after{
     width: 50%;
 }
+.login-nav-btn{
+    border-radius: 10%;
+}
+.login-nav-btn:hover{
+  margin-top: -5px;
+  transition: all 0.1s ease-in !important;
+  box-shadow: none;
+}
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  .fixed-nav .nav-btn{
+      color: white;
+  }

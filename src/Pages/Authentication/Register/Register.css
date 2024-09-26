@@ -1,0 +1,55 @@
+.bg{
+    background-color: #374252;
+    min-height: calc(100vh - 50px);
+}
+.form-container{
+    position: relative;
+    text-align: center;
+    width: 40%;
+    background: white;
+    margin: 0px auto;
+    padding: 50px 40px;
+    box-shadow: 2px 2px 10px 2px gray;
+    border-radius: 5px;
+  }
+  .log-in-header{
+      margin-bottom: 30px;
+      font-size: 48px;
+      font-weight: 300;
+}
+.btn-custom{
+    border: 2px solid #374252;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    background-color: #374252;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.btn-custom:hover{
+    background-color: white;
+    color: #374252;
+    transition: .35s;
+}
+.btn-custom2{
+    border: 2px solid #374252;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    background-color: white;
+    color: #374252;
+    text-decoration: none;
+    border-radius: 3px;
+}
+.btn-custom2:hover{
+    background-color: #374252;
+    color: white;
+    transition: .35s;
+}
+
+.radio-btn-color:checked{
+    background-color: #374252 !important;
+    border: none !important;
+}
+

@@ -8,16 +8,17 @@ const HomeProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/Hridoy3519/json-data/main/products.json"
+      "https://fathomless-tor-15212.herokuapp.com/products"
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
   return (
-    <Container>
+    <Container className="my-5">
+      <div className="section-title">Latest Auctions</div>
       <Row xs={1} md={4} className="g-4">
         {products.map((pd) => (
-          <ProductCard key={products.key} product={pd}></ProductCard>
+          <ProductCard key={products._id} product={pd}></ProductCard>
         ))}
       </Row>
     </Container>
